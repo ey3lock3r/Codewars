@@ -1,4 +1,6 @@
 import math
+FRUIT_NAMES = {"apple","pear","banana"}
+
 def test(a, b, num, msg):
     assert a == b, msg
     print('Test case {:1d} passed!'.format(num))
@@ -8,7 +10,7 @@ def cut_fruits(fruits):
         return []
 
     new_arr = []
-    [new_arr.extend(str(fruit[:math.ceil(len(fruit)/2)] + ' ' + fruit[math.ceil(len(fruit)/2):]).split()) if fruit in FRUIT_NAMES else new_arr.append(fruit) for fruit in fruits]
+    [new_arr.extend(str(fruit[:math.ceil(len(fruit)/2)] + ' ' + fruit[math.ceil(len(fruit)/2):]).split()) if fruit in FRUIT_NAMES else new_arr.append(fruit) for fruit in fruits] or new_arr 
     return new_arr
 
 #FRUIT_NAMES preloaded in site
